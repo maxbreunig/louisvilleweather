@@ -1,6 +1,13 @@
+
 import pandas as pd 
 from neuralprophet import NeuralProphet
 from matplotlib import pyplot as plt 
+import datetime 
+
+today =  datetime.date.today()
+future = datetime.date(2025,4,1)
+diff = future - today
+print(diff.days, 'number of future forecast dates')
 
 df = pd.read_csv('louisville_weather.csv')
 df.tail()
@@ -14,7 +21,7 @@ plt.plot(df ['Date'], df ['TempAvgF'])
 plt.show()
 
 new_column = df[['Date','TempAvgF']]
-new_column.dropna(inpace=True)
+new_column.dropna(inplace=True)
 new_column.columns = ['ds', 'y']
 new_column.tail()
 
