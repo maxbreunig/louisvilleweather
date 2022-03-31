@@ -34,7 +34,8 @@ Download file from git respository and extraxt the files.
 
 Open louisvilleforecast folder contents in visual studio.
 
-Run in the terminal in visual studio. 
+Run in the terminal in visual studio using CMD prompt style terminal:
+*C:\Users\Max\Documents\louisvilleforecast>louisvilleforecast.py
 
 *Please ensure python or any other package extensions are install in Visual Studio as well*
 
