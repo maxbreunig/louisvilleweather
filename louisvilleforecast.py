@@ -1,4 +1,3 @@
-
 import pandas as pd 
 from neuralprophet import NeuralProphet
 from matplotlib import pyplot as plt 
@@ -25,11 +24,12 @@ new_column.dropna(inplace=True)
 new_column.columns = ['ds', 'y']
 new_column.tail()
 
-n= NeuralProphet()
-model = n.fit(new_column, freq='D', epochs=5000)
+model= NeuralProphet()
+metrics = model.fit(new_column, validate_each_epoch=True, valid_p=.2, freq='D', plot_live_loss=True, epochs=10)
 
-future = n.make_future_dataframe(new_column, periods=1500)
-forecast = n.predict(future)
+
+future = model.make_future_dataframe(new_column, periods=1500)
+forecast = model.predict(future)
 forecast.tail()
 
-plot = n.plot(forecast) 
+plot = model.plot(forecast) 
