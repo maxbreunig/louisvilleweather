@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import datetime 
 import requests
 
-# hard code for city, could create input for choosing city
+# coded for city, could create input for choosing city, message displayed will fetching details
 city = 'Louisville'
 print("Loading the current forecast for " + city)
 
