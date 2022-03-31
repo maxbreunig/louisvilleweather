@@ -43,4 +43,6 @@ Run in the terminal in visual studio using CMD prompt style terminal:
 
 
 About:
-    This project starrted as a forecast predictor, but I could not harness neuralprohet because I was not working with Juypter Notebook and got too far behind to fix it. This project is the result
+    This project starrted as a forecast predictor, but I could not harness neuralprohet because I was not working with Juypter Notebook and got too far behind to fix it. This project is the result. 
+
+    Works with accurate monthly data for March 2022 in Louisville, KY
