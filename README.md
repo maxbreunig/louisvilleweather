@@ -1,15 +1,15 @@
-"# louisvilleweather" 
+"Louisville Weather" 
 
 
-REQUIREMENTS (pip install "_____") INSTALL in CMD and VS Studio:
-pip install pandas
-pip install matplotlib
-pip install requests
+REQUIREMENTS (pip install "_____") INSTALL in CMD Prompt and VS Studio:
+* pip install pandas
+* pip install matplotlib
+* pip install requests
 
 
 
 
-Also must have the latest version of Python downloaded as of 3.10.4 at python.org/downloads
+Also must have the latest version of Python downloaded as of 3.10.4 at https://www.python.org/downloads/
 
 Must have latest version of Microsoft Virtual Studio Code downloaded. Can find at https://visualstudio.microsoft.com/downloads/
 
