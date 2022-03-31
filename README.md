@@ -1,4 +1,5 @@
 "Louisville Weather" 
+* This program shows the current weather forecast as well as visualizes the month of 3/2022 in Louisville, KY thorugh a plot graph.
 
 
 REQUIREMENTS (pip install "_____") INSTALL in CMD Prompt and VS Studio:
