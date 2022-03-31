@@ -25,7 +25,7 @@ new_column.columns = ['ds', 'y']
 new_column.tail()
 
 model= NeuralProphet()
-metrics = model.fit(new_column, validate_each_epoch=True, valid_p=.2, freq='D', plot_live_loss=True, epochs=10)
+metrics = model.fit(new_column, freq='D')
 
 
 future = model.make_future_dataframe(new_column, periods=1500)
@@ -33,3 +33,5 @@ forecast = model.predict(future)
 forecast.tail()
 
 plot = model.plot(forecast) 
+
+plt.plot(forecast)
