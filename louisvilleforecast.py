@@ -2,13 +2,38 @@ import pandas as pd
 from neuralprophet import NeuralProphet
 from matplotlib import pyplot as plt 
 import datetime 
+import requests
 
+# hard code for city, could create input for choosing city
+city = 'Louisville'
+print("Loading the current forecast for " + city)
+
+
+# Display the message with report
+print('Displaying Weater report for: ' + city)
+
+# pull the weather details
+url = 'https://wttr.in/{}'.format(city)
+res = requests.get(url)
+
+#display the wttr forecast 
+print(res.text)
+
+
+
+
+
+
+
+
+# Counts the number of days after March 31st 2022, when the csv file becomes outdated.
 today =  datetime.date.today()
-future = datetime.date(2025,4,1)
-diff = future - today
-print(diff.days, 'number of future forecast dates')
+past = datetime.date(2022,3,31)
+diff = today - past
+print(diff.days, ' days since this graph became outdated')
 
-df = pd.read_csv('louisville_weather.csv')
+#plots the averages for March
+df = pd.read_csv('march2022weatherlou.csv')
 df.tail()
 df.Date.unique()
 df.columns
@@ -18,20 +43,3 @@ df.tail()
 df.dtypes 
 plt.plot(df ['Date'], df ['TempAvgF'])
 plt.show()
-
-new_column = df[['Date','TempAvgF']]
-new_column.dropna(inplace=True)
-new_column.columns = ['ds', 'y']
-new_column.tail()
-
-model= NeuralProphet()
-metrics = model.fit(new_column, freq='D')
-
-
-future = model.make_future_dataframe(new_column, periods=1500)
-forecast = model.predict(future)
-forecast.tail()
-
-plot = model.plot(forecast) 
-
-plt.plot(forecast)
