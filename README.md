@@ -32,6 +32,10 @@ Requirement category 3: Visualize data in a graph, chart, or other visual repres
 
         * lines 38 through 47
 
+Requirement category 4: The program should utilize a virtual environment and document library dependencies in a requirements.txt file.
+
+        * requirements.txt
+
 
 
 INSTRUCTIONS TO RUN:
