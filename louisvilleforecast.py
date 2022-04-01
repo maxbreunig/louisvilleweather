@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import datetime 
 import requests
 
-# coded for city, could create input for choosing city, message displayed will fetching details
+# coded for city, could create input for choosing city, message displayed while fetching details
 city = 'Louisville'
 print("Loading the current forecast for " + city)
 
@@ -14,7 +14,7 @@ print('Displaying Weater report for: ' + city)
 
 # pull the weather details from 3rd party (not an API, not sure if it counts but thought it was cool)
 url = 'https://wttr.in/{}'.format(city)
-res = requests.get(url)
+res = requests.get(url, verify=False)
 
 #display the wttr forecast 
 print(res.text)

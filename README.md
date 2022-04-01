@@ -1,6 +1,10 @@
 "Louisville Weather" 
 * This program shows the current weather forecast as well as visualizes the month of 3/2022 in Louisville, KY thorugh a plot graph.
 
+Please run in a virtual environment using:
+* python3 -m venv /path/new_env_name
+* source path/new_env_name/bin/activate
+* pip install -r requirements.txt 
 
 REQUIREMENTS (pip install "_____") INSTALL in CMD Prompt and VS Studio:
 * pip install pandas
