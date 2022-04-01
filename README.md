@@ -35,6 +35,14 @@ Requirement category 3: Visualize data in a graph, chart, or other visual repres
 
 
 INSTRUCTIONS TO RUN:
+git clone https://github.com/maxbreunig/louisvilleweather
+cd louisvilleweather-main
+pip install -r requirements.txt
+python louisvilleforecast.py
+
+Or 
+
+
 Download file from git respository and extraxt the files.
 
 Open louisvilleforecast folder contents in visual studio.
@@ -47,6 +55,6 @@ Run in the terminal in visual studio using CMD prompt style terminal:
 
 
 About:
-    This project starrted as a forecast predictor, but I could not harness neuralprohet because I was not working with Juypter Notebook and got too far behind to fix it. This project is the result. 
+    This project starrted as a forecast predictor, but I could not harness neuralprohet because I was not working with Juypter Notebook and got too far behind to fix it. This project is the result. Works with accurate monthly data for March 2022 in Louisville, KY.
 
-    Works with accurate monthly data for March 2022 in Louisville, KY
+    Broke my code an hour before submitted. Please run in virtual environment. 
